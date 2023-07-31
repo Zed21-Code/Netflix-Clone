@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import Row from './Components/Row/Row';
+import requests from './requests';
+import Banner from './Components/Banner/Banner';
+import Nav from './Components/Nav/Nav';
+// import 'dotenv/config'
 
 function App() {
+  console.log(process.env)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav />
+      <Banner/>
+      <Row  title='NETFLIX ORIGNAL' 
+            getUrl={requests.getNetflixOrignal}
+            isLargeRow />
+      <Row  title='Trending Now' 
+            getUrl={requests.getTrending} 
+        />    
+      <Row  title='Popular On Tv' 
+        getUrl={requests.getPopular} 
+        />
+      <Row  title='Top Rated' 
+            getUrl={requests.getTopRated} />
+      <Row  title='Action Movies' 
+            getUrl={requests.getActionMovies} />
+            <Row  title='Family' 
+            getUrl={requests.getAdventure} />
     </div>
   );
 }
