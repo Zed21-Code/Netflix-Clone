@@ -12,4 +12,4 @@ const requests = {
 
 export default requests
 
-// 'https://api.themoviedb.org/3/discover/theater?api_key=45ad9c4d73262d87772c048b0cd36430&include_adult=false&language=en-US&page=1&sort_by=vote_average.desc&vote_count.gte=200'
+// **************
